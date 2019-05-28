@@ -63,7 +63,7 @@ def _random_user_agent():
 
 def _get_result(word):
     headers = {
-        'User-agent': _random_user_agent()
+        'User-Agent': _random_user_agent()
     }
 
     with requests.Session() as envi_session:
