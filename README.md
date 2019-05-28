@@ -1,5 +1,5 @@
 # envi
-Translate English to Vietnamese via Command Line inspired by [howdoi](https://github.com/gleitz/howdoi)
+Translate English to Vietnamese via Command Line, inspired by [howdoi](https://github.com/gleitz/howdoi)
 
 # Usage
 ```python
