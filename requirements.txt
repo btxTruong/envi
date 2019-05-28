@@ -1,0 +1,4 @@
+requests==2.21.0
+appdirs==1.4.3
+beautifulsoup4==4.7.1
+cachelib==0.1
