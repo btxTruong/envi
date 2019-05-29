@@ -124,9 +124,9 @@ def envi(word):
             print("Can't find meaning of the {}".format(word))
             return
 
-        necessary_meaning = _necessary_classifier(all_meaning)
+        necessary_classifier = _necessary_classifier(all_meaning)
 
-        for mean in necessary_meaning:
+        for mean in necessary_classifier:
             meaning_of_word[word].update(_get_classifier(mean))
 
         cache.set(word, meaning_of_word[word])
