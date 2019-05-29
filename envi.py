@@ -75,7 +75,7 @@ def _get_all_meaning(html):
     return [str(mean) for mean in tree.select('div#show-alter.section-h2 > div#content-3.section-h3')]
 
 
-def _get_necessary_classifier(all_meaning):
+def _necessary_classifier(all_meaning):
     unnecessary_classifier = re.compile(r'Cấu trúc từ|Hình Thái Từ', re.IGNORECASE)
 
     return [mean for mean in all_meaning if not unnecessary_classifier.search(mean)]
@@ -124,7 +124,7 @@ def envi(word):
             print("Can't find meaning of the {}".format(word))
             return
 
-        necessary_meaning = _get_necessary_classifier(all_meaning)
+        necessary_meaning = _necessary_classifier(all_meaning)
 
         for mean in necessary_meaning:
             meaning_of_word[word].update(_get_classifier(mean))
