@@ -89,11 +89,7 @@ def _get_classifier(html):
     classifier = classifier.search(html).group(1)
 
     mean_in_classifier = re.compile(r'<h5>\s*<span class="mw-headline">(.*?)</span></h5>')
-    means = []
-    for mean in mean_in_classifier.findall(html):
-        means.append(mean)
-
-    result[classifier] = means
+    result[classifier] =  mean_in_classifier.findall(html)
 
     return result
 
