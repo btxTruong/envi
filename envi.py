@@ -151,6 +151,10 @@ def command_line():
         else:
             print('Clear cache failed')
         return
+    
+    if not args['word']:
+        parser.print_help()
+        return
 
     envi(args['word'])
 
